@@ -67,3 +67,9 @@ output "tables" {
     }
   }
 }
+
+output "primary_access_key" {
+  description = "The Primary Access Key of the Storage Account."
+  value       = azurerm_storage_account.this.primary_access_key
+  sensitive   = true
+}
